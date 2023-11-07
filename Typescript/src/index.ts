@@ -1,0 +1,20 @@
+import http from 'node:http';
+
+const port = process.env.PING_LISTEN_PORT;
+
+// Create a local server to receive data from
+const server = http.createServer((req, res) => {
+  if (req.method === 'GET' && req.url === '/ping') {
+    var headers = JSON.stringify(req.headers);
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(headers)
+  }
+  else {
+    res.writeHead(404, { 'Content-Type': 'application/json' });
+    res.end()
+  }
+  });
+
+server.listen(port, () => {
+  console.log('Server running at localhost:',port);
+});
