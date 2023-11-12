@@ -2,7 +2,6 @@ import http from 'node:http';
 
 const port = process.env.PING_LISTEN_PORT;
 
-// Create a local server to receive data from
 const server = http.createServer((req, res) => {
   if (req.method === 'GET' && req.url === '/ping') {
     var headers = JSON.stringify(req.headers);
