@@ -16,11 +16,15 @@ npm install
 ```
 npx tsc
 ```
-4. Run
+4. Export the PING_LISTEN_PORT environnement variable with the port of your choice
+```
+export PING_LISTEN_PORT=<port>
+```
+5. Run
 ```
 node build/index.js
 ```
-5. Test
+6. Test
 ```
-curl http://localhost:8000/ping
+curl http://localhost:<port>/ping
 ```

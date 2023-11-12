@@ -12,11 +12,15 @@ git clone https://github.com/arpaflow/tp-wik-dps-tp01.git
 ```
 cd Rust
 ```
-3. Build & Run
+4. Export the PING_LISTEN_PORT environnement variable with the port of your choice
+```
+export PING_LISTEN_PORT=<port>
+```
+5. Build & Run
 ```
 cargo run
 ```
-4. Test
+6. Test
 ```
 curl http://localhost:8000/ping
 ```
