@@ -1,26 +1,22 @@
-# tp-wik-dps-tp01 - Typescript version
+# tp-wik-dps-tp01 - Rust version
 ## Build & Run
 ### Software needed
 ```
-node, npm, git
+rust, cargo, git
 ```
 1. Clone the repository
 ```
 git clone https://github.com/arpaflow/tp-wik-dps-tp01.git
 ```
-2. Install dependencies
+2. Change directory
 ```
-npm install
+cd Rust
 ```
-3. Build
+3. Build & Run
 ```
-npx tsc
+cargo run
 ```
-4. Run
-```
-node build/index.js
-```
-5. Test
+4. Test
 ```
 curl http://localhost:8000/ping
 ```
